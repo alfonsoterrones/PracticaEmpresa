@@ -130,6 +130,7 @@ public class FilesPruebas {
 
 		      System.out.println( "-> Nombre actual de LocalHost" );
 		      System.out.println( address.getHostName() );
+		      //mas
 		       
 		      System.out.println( "-> Direccion IP actual de LocalHost" );
 		      // Coge la dirección IP como un array de bytes
