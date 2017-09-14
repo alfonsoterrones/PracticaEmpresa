@@ -13,8 +13,6 @@ public class App
     public static void main( String[] args ) throws IOException
     {
         FilesPruebas pru=new FilesPruebas();
-//        pru.pruebasDeProyecto();
-        pru.lecturaDeFicheros();
-        
+         pru.inetAddresPruebas();
     }
 }
