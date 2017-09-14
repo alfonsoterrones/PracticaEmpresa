@@ -78,7 +78,7 @@ public class FilesPruebas {
 
 	}
 	
-	//prueba
+	//prueba1
 	public void lecturaDeFicheros() throws IOException {
 		
 		BasicConfigurator.configure();
