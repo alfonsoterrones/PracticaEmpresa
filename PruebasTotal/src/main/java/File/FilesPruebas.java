@@ -1,7 +1,10 @@
 package File;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -66,12 +69,25 @@ public class FilesPruebas {
 		File configuracionDatosPersonales = new File(System.getProperty("user.home"), "datosPersonales.conf");
 		FileWriter fichero = new FileWriter(configuracionDatosPersonales);
 	
-		fichero.write("Nombre: Alfonso");
+		fichero.write("Alfonso");
 		fichero.write("\r\n");
-		fichero.write("Apellido: Terrones Moreno");
+		fichero.write("Terrones Moreno");
 		fichero.write("\r\n");
-		fichero.write("Telefono: 647749447");
+		fichero.write("647749447");
 		fichero.close();
 
+	}
+	
+	public void lecturaDeFicheros() throws IOException {
+		
+		BasicConfigurator.configure();
+		
+		File archivo = new File (System.getProperty("user.home")+"\\datosPersonales.conf");
+		FileReader fr = new FileReader (archivo);
+		BufferedReader br = new BufferedReader(fr);
+		String linea = br.readLine();
+		log.info("Estamos leyendo el archivo de configuracion"+linea);
+	    linea = br.readLine();
+	    log.info("Estamos leyendo el archivo de configuracion"+linea);
 	}
 }
